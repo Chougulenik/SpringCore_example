@@ -13,7 +13,11 @@ public class Main {
 		System.out.println(obj1 +" "+obj2);
 		
 		TeacherXml teach1 = context.getBean("teacher", TeacherXml.class);
+		teach1.setName("nikita");
+		System.out.println(teach1.getName());
+		
 		TeacherXml teach2 = context.getBean("teacher", TeacherXml.class);
+		System.out.println(teach2.getName());
 		
 		System.out.println(teach1.hashCode()+ " "+ teach2.hashCode());
 	}

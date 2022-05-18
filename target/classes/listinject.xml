@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean  id = "student" class ="com.spring.list.Student">
+    <constructor-arg value = "Nikita"></constructor-arg>
+    <constructor-arg><ref bean = "address" /></constructor-arg>
+    <constructor-arg>
+    	<list>
+    		<ref bean = "friends1"></ref>
+    		<ref bean = "friends2"></ref>
+    	</list>
+    </constructor-arg>
+    
+    </bean>
+    
+    <bean id = "address" class = "com.spring.list.Address">
+    <constructor-arg value = "Maharastra"></constructor-arg>
+    <constructor-arg value = "Satara"></constructor-arg>
+    </bean>
+    
+    <bean id = "friends1" class = "com.spring.list.Friends">
+    <property name="friendName" value = "Anil"></property>
+    </bean>
+    
+    <bean id = "friends2" class = "com.spring.list.Friends">
+    <property name="friendName" value = "pooja"></property>
+    </bean>
+ 
+</beans>
